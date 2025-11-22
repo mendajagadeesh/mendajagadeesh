@@ -3,7 +3,7 @@ name: Generate Snake Animation
 on:
   schedule:
     - cron: "0 0 * * *"   # Runs every day at midnight (UTC)
-  workflow_dispatch:       # You can run it manually
+  workflow_dispatch:       # You can run it manually from the Actions tab
 
 permissions:
   contents: write
@@ -20,7 +20,7 @@ jobs:
         with:
           github_user_name: mendajagadeesh
           outputs: |
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg
 
       - name: Push Snake SVG to output branch
         uses: peaceiris/actions-gh-pages@v3
